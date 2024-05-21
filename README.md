@@ -16,6 +16,9 @@ npm run dev
 
 
 ## Stack
+Tool we use in this project:
 - **SCSS** - For the CSS Preprocessor
 - **Tailwind CSS** - For Styling
 - **Inter** - Primary Font Face
+- **Axios** - HTTP Client
+- **Tanstack Query** - For data fetching and caching
