@@ -1,11 +1,11 @@
 import { BreedImage } from '@/types'
-import { useInfiniteQuery } from '@tanstack/react-query'
+import { useInfiniteQuery, useQuery } from '@tanstack/react-query'
 import useAxios from '@/hooks/useAxios'
 import qs from 'query-string'
 
 const ENDPOINT = '/v1/images'
 
-type FindAllQuery = {
+type FindAllParams = {
   limit?: number;
   page?: number;
   breed_id?: string;
@@ -16,9 +16,9 @@ export default function useImageApi() {
   const { api } = useAxios()
 
   /**
-   * Fetch all breeds.
+   * Fetch all breed images.
    */
-  const findAll = async (query: FindAllQuery = {}) => {
+  const findAll = async (query: FindAllParams = {}) => {
     // If limit is not provided, default to 10
     query.limit = query.limit ?? 10
 
@@ -28,8 +28,14 @@ export default function useImageApi() {
     return api.get(`${ENDPOINT}/search?${qs.stringify(query)}`)
   }
 
+  /**
+   * Fetch one breed image.
+   */
+  const findOne = async (imageId: string) => api.get(`${ENDPOINT}/${imageId}`)
+
   return {
     findAll,
+    findOne,
   }
 }
 
@@ -37,7 +43,7 @@ export default function useImageApi() {
  * React Query hook to trigger `findAll`
  */
 export const useFindAllImagesQuery = (
-  query: FindAllQuery = {},
+  query: FindAllParams = {},
   options: any = {}
 ) => {
   const { findAll } = useImageApi()
@@ -70,6 +76,19 @@ export const useFindAllImagesQuery = (
         ? allPages.length + 1
         : undefined
     },
+    ...options,
+  })
+}
+
+/**
+ * React Query hook to trigger `fineOne`
+ */
+export const useFindOneImageQuery = (imageId: string, options: any = {}) => {
+  const { findOne } = useImageApi()
+
+  return useQuery<BreedImage>({
+    queryKey: ['images', imageId],
+    queryFn: () => findOne(imageId).then(({ data }) => data),
     ...options,
   })
 }

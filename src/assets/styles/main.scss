@@ -6,7 +6,7 @@
 @import 'fonts';
 
 body {
-  @apply font-body text-secondary overflow-x-hidden;
+  @apply antialiased font-body text-secondary overflow-x-hidden;
 }
 
 @layer components {

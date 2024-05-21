@@ -1,0 +1,13 @@
+#page-breed-details {
+  .info-title {
+    @apply text-primary-500 font-semibold;
+  }
+
+  .info-content {
+    @apply text-base md:text-lg;
+  }
+}
+
+.page-breed-loading-wrapper {
+  @apply bg-[#FCF1E4] min-h-screen py-12 sm:py-16 md:py-20 lg:py-24 px-8 flex flex-col items-center justify-center;
+}

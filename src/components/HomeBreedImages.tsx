@@ -59,7 +59,7 @@ function HomeBreedImages() {
         {isLoading && <p className="text-loading">Fetching images...</p>}
         <div className="flex flex-wrap justify-center gap-8">
           {uniqueImages.map((image: any) => (
-            <BreedImageLink image={image} />
+            <BreedImageLink key={image.id} image={image} />
           ))}
         </div>
         {!isLoading &&
