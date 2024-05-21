@@ -1,0 +1,21 @@
+:root {
+  // Primary color shades and tints
+  --color-primary-50: #fef5f2;
+  --color-primary-100: #ffeae1;
+  --color-primary-200: #ffd8c8;
+  --color-primary-300: #ffbba0;
+  --color-primary-400: #fd956c;
+  --color-primary-500: #f5723e;
+  --color-primary-600: #e25720;
+  --color-primary-700: #be4617;
+  --color-primary-800: #9d3d17;
+  --color-primary-900: #82381a;
+  --color-primary-950: #471a08;
+  --color-primary: #ffbba0;
+	--color-primary-rgb: 255,187,160;
+	--color-primary-contrast: #000000;
+	--color-primary-contrast-rgb: 0,0,0;
+	--color-primary-shade: #e0a58d;
+	--color-primary-tint: #ffc2aa;
+  --color-primary-disabled: rgba(var(--color-primary-rgb), 0.66);
+}
