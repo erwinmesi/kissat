@@ -15,7 +15,7 @@ body {
 
 @layer components {
   .btn {
-    @apply border rounded-full px-4 py-2 text-base disabled:cursor-not-allowed;
+    @apply border rounded-full px-4 py-2 text-base disabled:cursor-not-allowed transition-all;
   }
 
   .btn-sm {
