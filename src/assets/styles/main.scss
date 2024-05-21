@@ -5,6 +5,10 @@
 @import 'variables';
 @import 'fonts';
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @apply antialiased font-body text-secondary overflow-x-hidden;
 }
