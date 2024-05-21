@@ -29,6 +29,10 @@ body {
   .btn-primary {
     @apply bg-primary-50 border-primary disabled:bg-primary-disabled;
 
+    &.btn-active {
+      @apply bg-primary-100;
+    }
+
     &:not(:disabled) {
       @apply hover:bg-primary-200;
     }

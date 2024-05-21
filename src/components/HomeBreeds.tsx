@@ -2,6 +2,7 @@ import { useAppContext } from '@/context/AppContext'
 import { useFindAllBreedsQuery } from '@/hooks/services/useBreedApi'
 import { useBreed } from '@/hooks/useBreed'
 import { Breed } from '@/types'
+import classNames from 'classnames'
 
 function HomeBreeds() {
   const { selectedBreed, setSelectedBreed } = useAppContext()
@@ -55,7 +56,9 @@ function HomeBreeds() {
               <button
                 key={breed.id}
                 onClick={() => setSelectedBreed(breed)}
-                className="btn btn-sm md:btn-md btn-primary"
+                className={classNames('btn btn-sm md:btn-md btn-primary', {
+                  'btn-active': breed.id === selectedBreed?.id,
+                })}
               >
                 {breed.name}
               </button>
