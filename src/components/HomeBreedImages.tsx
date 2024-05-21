@@ -60,7 +60,7 @@ function HomeBreedImages({ titlePrefix }: HomeBreedImagesProps) {
             </>
           ) : (
             <>
-              Some of our <span className="text-primary-500">favorites</span>{' '}
+              Some of our <span className="text-primary-500">favorite</span>{' '}
               cats
             </>
           )}
