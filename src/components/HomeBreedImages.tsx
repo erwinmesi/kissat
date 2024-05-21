@@ -65,7 +65,7 @@ function HomeBreedImages({ titlePrefix }: HomeBreedImagesProps) {
             </>
           )}
         </h2>
-        {isLoading && <p className="text-loading">Fetching images...</p>}
+        {isLoading && <p className="text-loading">Fetching cat selfies...</p>}
         <div className="flex flex-wrap justify-center gap-8">
           {uniqueImages.map((image: any) => (
             <BreedImageLink key={image.id} image={image} />

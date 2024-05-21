@@ -44,7 +44,11 @@ function HomeBreeds() {
             </select>
           </div>
         </div>
-        {isLoading && <p className="text-loading">Fetching breeds...</p>}
+        {isLoading && (
+          <p className="text-loading">
+            Hang tight! We're rounding up the furr-iest cat breeds for you...
+          </p>
+        )}
         <div className="breed-highlights flex flex-wrap gap-2 md:gap-4 justify-center">
           {!!highlightedBreeds.length &&
             highlightedBreeds.map((breed: Breed) => (

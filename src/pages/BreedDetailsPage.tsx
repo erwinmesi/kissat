@@ -31,7 +31,9 @@ function BreedDetailsPage() {
     return (
       <div className="page-breed-loading-wrapper">
         <p className="text-loading !text-primary-500 mb-8">
-          Fetching breed details...
+          Hold on a whisker!
+          <br />
+          We're gathering the purrfect details for this breed...
         </p>
         <img src={gifCat} alt="Loading" className="w-48 h-48" />
       </div>
