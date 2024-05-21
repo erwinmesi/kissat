@@ -4,6 +4,7 @@ import { useMemo } from 'react'
 import { useFindOneImageQuery } from '@/hooks/services/useImageApi'
 import { BreedImage } from '@/types'
 import gifCat from '@/assets/img/cat.gif'
+import imgError from '@/assets/img/error.webp'
 import BackButton from '@/components/common/BackButton'
 import useRoute from '@/hooks/useRoute'
 
@@ -41,10 +42,11 @@ function BreedDetailsPage() {
   if (error) {
     return (
       <div className="page-breed-loading-wrapper">
-        <p className="text-red-500 mb-8 text-lg">
-          Failed to fetch breed details.
+        <p className="text-gray-700 mb-8 text-lg font-bold text-center">
+          <span className="block text-2xl mb-2">Uh-oh! Page not found.</span>
+          Looks like the cats have knocked this page off the shelf.
         </p>
-        <span className="text-7xl">😿</span>
+        <img src={imgError} alt="Error" className="max-w-96 w-full" />
         <BackButton
           to={routes.home.path}
           text="Back to Home"
