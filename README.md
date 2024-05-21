@@ -13,3 +13,9 @@ Start development environment server
 ```
 npm run dev
 ```
+
+
+## Stack
+- **SCSS** - For the CSS Preprocessor
+- **Tailwind CSS** - For Styling
+- **Inter** - Primary Font Face

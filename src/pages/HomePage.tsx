@@ -1,7 +1,9 @@
+import HomeHero from '@/components/HomeHero'
+
 function HomePage() {
   return (
-    <main id="page-main">
-      <section className="h-[600px] bg-primary"></section>
+    <main id="page-main" className="antialiased">
+      <HomeHero />
     </main>
   )
 }

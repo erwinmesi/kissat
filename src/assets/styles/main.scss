@@ -2,4 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@import 'variables'
+@import 'variables';
+@import 'fonts';
+
+body {
+  @apply font-body text-secondary overflow-x-hidden;
+}
