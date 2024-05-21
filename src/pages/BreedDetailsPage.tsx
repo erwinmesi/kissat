@@ -47,7 +47,7 @@ function BreedDetailsPage() {
         <span className="text-7xl">😿</span>
         <BackButton
           to={routes.home.path}
-          text="Home Page"
+          text="Back to Home"
           className="btn btn-primary mt-8"
         />
       </div>
@@ -59,7 +59,7 @@ function BreedDetailsPage() {
       <div className="pt-12 sm:pt-16 md:pt-20 lg:pt-24 bg-primary-300 flex justify-center relative min-h-72">
         <BackButton
           to={routes.home.path}
-          text="Home Page"
+          text="Home"
           className="absolute top-8 left-8"
         />
         <div className="shrink-0 rounded-3xl inline-block absolute -bottom-48 border-8 border-white">
@@ -70,7 +70,7 @@ function BreedDetailsPage() {
           />
         </div>
       </div>
-      <section className="bg-white pt-48 pb-12 sm:pb-16 md:pb-20 lg:pb-24">
+      <section className="bg-white pt-48 pb-12">
         <div className="max-w-7xl mx-auto p-8 md:p-12 text-center space-y-6 md:space-y-8">
           <div>
             <p className="info-title">Name</p>
@@ -89,6 +89,13 @@ function BreedDetailsPage() {
             <p className="info-content max-w-3xl mx-auto">
               {breed?.description}
             </p>
+          </div>
+          <div>
+            <BackButton
+              to={routes.home.path}
+              text="Back to Home"
+              className="btn btn-primary mt-8"
+            />
           </div>
         </div>
       </section>

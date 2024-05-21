@@ -75,11 +75,11 @@ function HomeBreedImages({ titlePrefix }: HomeBreedImagesProps) {
           (hasNextPage ? (
             <div className="flex justify-center py-12">
               <button
-                className="btn btn-primary"
+                className="btn btn-primary px-6"
                 onClick={() => fetchNextPage()}
                 disabled={isFetchingNextPage}
               >
-                {isFetchingNextPage ? 'Loading more...' : 'Load more'}
+                {isFetchingNextPage ? 'Loading...' : 'Load More'}
               </button>
             </div>
           ) : (

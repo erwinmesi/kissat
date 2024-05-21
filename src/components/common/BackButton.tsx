@@ -13,7 +13,7 @@ function BackButton({ to, className, text }: BackButtonProps) {
     <Link
       to={to}
       className={cn(
-        'text-primary-700 flex gap-2 items-center group',
+        'text-primary-700 inline-flex gap-2 items-center group',
         className
       )}
     >
