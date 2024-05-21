@@ -15,10 +15,14 @@ npm run dev
 ```
 
 
-## Stack
-Tool we use in this project:
+## Tech Stack
+Tools we use in this project:
 - **SCSS** - For the CSS Preprocessor
 - **Tailwind CSS** - For Styling
 - **Inter** - Primary Font Face
 - **Axios** - HTTP Client
 - **Tanstack Query** - For data fetching and caching
+- **React Router Dom** - For routing
+- **Context API** - For State Management
+- **TSX** - For templating
+- **ESList** - For linting
