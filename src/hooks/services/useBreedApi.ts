@@ -1,4 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
+import { Breed } from '@/types'
 import useAxios from '@/hooks/useAxios'
 
 const ENDPOINT = '/v1/breeds'
@@ -22,7 +23,7 @@ export default function useBreedApi() {
 export const useFindAllBreedsQuery = (options: any = {}) => {
   const { findAll } = useBreedApi()
 
-  return useQuery<any>({
+  return useQuery<Breed[]>({
     queryKey: ['breeds'],
     queryFn: () => findAll().then(({ data }) => data),
     ...options,

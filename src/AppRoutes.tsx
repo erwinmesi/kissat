@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import useRoute from '@/hooks/useRoute'
 
 import HomePage from '@/pages/HomePage'
-import CatDetailsPage from '@/pages/CatDetailsPage'
+import BreedDetailsPage from '@/pages/BreedDetailsPage'
 
 const AppRoutes = () => {
   const { routes } = useRoute()
@@ -14,7 +14,7 @@ const AppRoutes = () => {
       <Suspense fallback={<div>Loading....</div>}>
         <Routes>
           <Route path={routes.home.path} element={<HomePage />} />
-          <Route path={routes.showCat.path} element={<CatDetailsPage />} />
+          <Route path={routes.showBreed.path} element={<BreedDetailsPage />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

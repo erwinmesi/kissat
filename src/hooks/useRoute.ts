@@ -4,10 +4,10 @@ export interface Route {
   path: string;
 
   // Function to generate the path based on params
-  makePath?: (...params: any) => string;
+  makePath: (...params: any) => string;
 }
 
-type RouteKeys = 'home' | 'showCat';
+type RouteKeys = 'home' | 'showBreed';
 
 /**
  * Define all the routes in the application.
@@ -18,13 +18,14 @@ const routes: Record<RouteKeys, Route> = {
     name: 'home.index',
     label: 'Home',
     path: '/',
+    makePath: () => '/',
   },
 
-  showCat: {
+  showBreed: {
     name: 'cats.show',
-    label: 'Cat Details',
-    path: '/cats/:catId',
-    makePath: (catId: string) => `/cats/${catId}`,
+    label: 'Breed Details',
+    path: '/:breedId',
+    makePath: (breedId: string) => `/${breedId}`,
   },
 }
 
