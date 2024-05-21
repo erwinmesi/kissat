@@ -8,6 +8,7 @@ import BackButton from '@/components/common/BackButton'
 import useRoute from '@/hooks/useRoute'
 
 import '@/assets/styles/breed-details-page.scss'
+import HomeBreedImages from '@/components/HomeBreedImages'
 
 function BreedDetailsPage() {
   const params = useParams<{ breedId: string }>()
@@ -69,7 +70,7 @@ function BreedDetailsPage() {
           />
         </div>
       </div>
-      <section className="bg-white pt-48">
+      <section className="bg-white pt-48 pb-12 sm:pb-16 md:pb-20 lg:pb-24">
         <div className="max-w-7xl mx-auto p-8 md:p-12 text-center space-y-6 md:space-y-8">
           <div>
             <p className="info-title">Name</p>
@@ -91,6 +92,7 @@ function BreedDetailsPage() {
           </div>
         </div>
       </section>
+      <HomeBreedImages titlePrefix="You might also love" />
     </main>
   )
 }

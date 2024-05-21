@@ -7,7 +7,11 @@ import { useFindAllImagesQuery } from '@/hooks/services/useImageApi'
 import EndOfList from '@/components/common/EndOfList'
 import BreedImageLink from './breed/BreedImageLink'
 
-function HomeBreedImages() {
+interface HomeBreedImagesProps {
+  titlePrefix?: string;
+}
+
+function HomeBreedImages({ titlePrefix }: HomeBreedImagesProps) {
   const { selectedBreed } = useAppContext()
 
   const {
@@ -43,6 +47,11 @@ function HomeBreedImages() {
   return (
     <section className="bg-primary-100 py-12 sm:py-16 md:py-20 lg:py-24 px-6 sm:px-8">
       <div className="max-w-7xl mx-auto">
+        {titlePrefix && (
+          <p className="text-lg text-center text-primary-600 font-semibold mb-2">
+            {titlePrefix}
+          </p>
+        )}
         <h2 className="text-2xl font-bold text-center mb-8 md:mb-12">
           {selectedBreed?.id ? (
             <>
